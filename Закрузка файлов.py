@@ -37,7 +37,7 @@ class Loading_url:
     def uploading_a_file(self):
         headers = {'Content-type': 'image/jpeg'}
         # Отправляем команду на выполнение.
-        files = requests.put(self.download_link, data=open('den.txt', 'rb'), headers=headers)
+        files = requests.put(self.download_link, data=open(self.download_file, 'rb'), headers=headers)
         if files.status_code == 201:  # Команда выполнена успешно.
             print('Файл загружен успешно.')
         else:
@@ -46,9 +46,9 @@ class Loading_url:
 
 if __name__ == '__main__':
     # указываем путь на диске
-    specify_the_path_on_the_disk = '/'  # '/'- Корневая папка диска.
+    specify_the_path_on_the_disk = ''  # ''- Корневая папка диска.
     # Имя файла и формат.
-    file = ''
+    file = 'denis.jpg'
     # Указываем что хотим загрузить.
-    download_file = ''
+    download_file = '/Users/dEniS/Downloads/ppp.jpg'
     Loading_url(token, f'{specify_the_path_on_the_disk}/{file}', download_file)
