@@ -33,4 +33,4 @@ class Loading_url:
 
 if __name__ == '__main__':
     ooo = 'https://vvphoto.ru/wp-content/uploads/2015/03/n14_4751.jpg'
-    Loading_url(token, '/pyt/d.jpg', ooo)
+    Loading_url(token, '/d.jpg', ooo)
